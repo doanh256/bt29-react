@@ -1,5 +1,5 @@
 import { Spin } from "andtd";
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 const DEFAUL_VALUE = {
   isLoading: false,
@@ -8,9 +8,11 @@ const DEFAUL_VALUE = {
 const LoadingContext = createContext();
 
 const LoadingProvider = (props) => {
+    const [state, setState] = useState[DEFAUL_VALUE];
+    const style = {}
   return (
     <LoadingContext.Provider value={[state, setState]}>
-        <div><Spin /></div>
+        <div style={style}><Spin /></div>
       
       {props.children}
     </LoadingContext.Provider>
