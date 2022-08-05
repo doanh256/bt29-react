@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { LoaiGhe } from "../../enums/common";
 
 import "./index.scss";
 
@@ -9,7 +10,7 @@ export default function Chair(props) {
     let defaultClass = "ghe";
 
     if (props.item.loaiGhe === "Vip") {
-      defaultClass += " gheVip";
+      defaultClass += LoaiGhe.Vip;
     }
 
     if (isSelected) {
